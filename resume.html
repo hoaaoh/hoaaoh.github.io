@@ -25,18 +25,18 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <a href="projects.html">Projects</a>
-            <a href="hobby.html">Hobby</a>
-        </nav>
-    </header>
+    <header id="header"></header>
     <main>
         <h1>My Resume</h1>
         <p>Here is my professional experience and education.</p>
         <!-- Add your resume content here -->
     </main>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
 </body>
 </html>

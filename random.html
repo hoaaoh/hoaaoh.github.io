@@ -25,19 +25,25 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <a href="projects.html">Projects</a>
-            <a href="hobby.html">Hobby</a>
-            <a href="random.html">Hobby</a>
-        </nav>
-    </header>
+    <header id="header"></header>
     <main>
         <h1>Random Thoughts</h1>
         <p>Here are some of my random thoughts.</p>
         <!-- Add your hobby content here -->
+        <h2>07/09/2024 What I did today?</h2>
+        <p>I had an interview. The position is MLE and it is a coding interview which related to ML. The question is to implement K-Means algorithm. </p>
+        <p>So what is K-means? K-means is an algorithm that divide given n points into k clusters. </p>
+        <p>The process is like this: 1. Initialize k points as the centroid clusters. (There are different ways to do initialization) We can random pick k points to init as the centroids here. </p>
+        <p> 2. Calculate the distances between each point and each centroid. Determine the centroid that each point belongs to by the distance. Make sure there is at least one point which belongs to each cluster. </p>
+        <p> 3. Update the centroids by calculating the new centroid of each cluster. </p>
+        <p> 4. Iterate from step 2 to step 4 until it hits the stopping criteria. The stopping point could be the cluster each point belongs to doesn't change from previous one. </p>
     </main>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
 </body>
 </html>

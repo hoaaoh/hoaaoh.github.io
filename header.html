@@ -5,3 +5,12 @@
     <a href="hobby.html">Hobby</a>
     <a href="random.html">Random</a>
 </nav>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('.markdown-block').forEach((block) => {
+            const markdown = block.getAttribute('data-markdown');
+            block.innerHTML = marked.parse(markdown);
+        });
+    });
+</script>

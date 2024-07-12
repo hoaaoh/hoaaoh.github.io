@@ -10,6 +10,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 header {
@@ -17,6 +22,7 @@ header {
     color: #fff;
     padding: 1em 0;
     text-align: center;
+    width: 100%;
 }
 
 nav {
@@ -44,6 +50,24 @@ main {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.block {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.block h2 {
+    margin-bottom: 10px;
+}
+
+.block p {
+    margin: 10px 0;
 }
 
 footer {
@@ -51,7 +75,7 @@ footer {
     padding: 10px;
     background: #333;
     color: #fff;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    position: absolute;
+    bottom: 0;
 }

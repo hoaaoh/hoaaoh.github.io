@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random</title>
+    <title>Hao | Random</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,13 +12,27 @@
         <h1>Random Thoughts</h1>
         <p>Here are some of my random thoughts.</p>
         <!-- Add your hobby content here -->
-        <h2>07/09/2024 What I did today?</h2>
+        <h2>07/11/2024 What I did today.</h2>
+        <p>I asked ChatGPT about some usage of different types of variables: local / nonlocal</p>
+        <h2>07/10/2024 What I did today.</h2>
+        <p>I had serveral interviews. There are some questions to be asked. When we talk about programming languages, Python. What would they want to know generally?</p>
+        <p>There are a few keywords that I encountered recently, such as decorators, local / nonlocal (enclosing) variable / global variable / built-in variable, immutable variable vs mutable variable, ..., etc. </p>
+        <p>Since I was asked about the questions like these, I took some time watching some Python tutorials and review the answers from ChatGPT.</p>
+        <p>Here are some notes that I learned. Let's start from decorators.</p>
+        <p>What is a decorator in Python? A decorator is basically a function that wraps the function it decorates. The syntax of decorator is "@[decorator_name]" above the function it decorates.</p>
+        <p>1. The result of calling the decorated function is equivelent to decorator_func(decorated_function(arg1, arg2)), ..., etc.</p>
+        <p>2. The decorator could be placed on a class as well. If the class is decorated, it must have a __call__ function within the class.</p>
+        <p>3. A decorator could be declared within a class. You can define the function as a normal function instead of a class function or method. Then using function_name = staticmethod(function_name). Then you could use @[class_name].[decorator_name] to decorate outer functions.</p>
+        <p>4. The decorators are mostly used in: Logging, Authorization, Caching, Timing, Validation, Class Decorators, Frameworks and Libraries. Their ability to clearnly separate concerns makes them an essential tool for Python developers.</p>
+
+        <h2>07/09/2024 What I did today.</h2>
         <p>I had an interview. The position is MLE and it is a coding interview which related to ML. The question is to implement K-Means algorithm. </p>
         <p>So what is K-means? K-means is an algorithm that divide given n points into k clusters. </p>
         <p>The process is like this: 1. Initialize k points as the centroid clusters. (There are different ways to do initialization) We can random pick k points to init as the centroids here. </p>
         <p> 2. Calculate the distances between each point and each centroid. Determine the centroid that each point belongs to by the distance. Make sure there is at least one point which belongs to each cluster. </p>
         <p> 3. Update the centroids by calculating the new centroid of each cluster. </p>
         <p> 4. Iterate from step 2 to step 4 until it hits the stopping criteria. The stopping point could be the cluster each point belongs to doesn't change from previous one. </p>
+        <p> Example implementation: </p>
     </main>
     <script>
         fetch('header.html')
